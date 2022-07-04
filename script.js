@@ -2,7 +2,7 @@
 let grid = document.querySelector('.container');
 
 //Creating the grid
-function createRow(cellNum) {
+function createGrid(cellNum) {
     for(i = 0; i < cellNum; i++) {
         let row = document.createElement('div');
         row.className = 'row';
@@ -17,6 +17,11 @@ function createRow(cellNum) {
     };
 }
     
-createRow(12);
+createGrid(16);
 
+let cells = document.querySelectorAll('.cell');
+
+cells.forEach((cell) => cell.addEventListener('mouseover', (e) => {
+    cell.setAttribute('style', 'background: black;');
+}));
 
