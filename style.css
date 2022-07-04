@@ -1,17 +1,59 @@
+body {
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+}
+
 h1 {
     text-align: center;
-    font-family: sans-serif;
+    font-family: quicksand, roboto, sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight: 990;
 }
+
+
 
 .container {
     display: flex;
-    margin: auto;
     padding: 0;
-    height: 40vw;
-    width: 50vw;
+    height: 35vw;
+    width: 40vw;
     flex-direction: column;
-    border: black solid 2px;
+    margin: auto;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    gap: 32px;
+}
+
+button {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 100);
+}
+
 
 .row {
     display: flex;
@@ -19,6 +61,6 @@ h1 {
 }
 
 .cell {
-    border: rgba(150, 150, 150, 0.329) solid 0.25px;
+    background-color: white;
     flex: 1;
 }

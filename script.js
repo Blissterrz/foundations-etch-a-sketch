@@ -28,7 +28,7 @@ let resetBtn = document.querySelector('.reset');
 resetBtn.addEventListener('click', reset);
 
 //Setting the number of cells button
-function getSetSize() {
+function getSetSize() {       //Checks the inputted value to make sure it's valid
     let setNum = prompt('Choose the number of squares per side for the grid.');
     if (setNum > 100) {
         alert('The number you have entered is too large, please enter a smaller number.');
@@ -43,7 +43,7 @@ function getSetSize() {
         return setNum;
     }
 }
-function setSize() {
+function setSize() {         //Receives the valid value and sets the new grid size
     grid.textContent = '';
     let setNum = getSetSize();
     createGrid(setNum);
