@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    padding: 0;
+    height: 40vw;
+    width: 50vw;
+    flex-direction: column;
+    border: black solid 2px;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.cell {
+    border: rgba(150, 150, 150, 0.329) solid 0.25px;
+    flex: 1;
+}
