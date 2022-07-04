@@ -19,9 +19,16 @@ function createGrid(cellNum) {
     
 createGrid(16);
 
+//Main hover functionality
 let cells = document.querySelectorAll('.cell');
-
 cells.forEach((cell) => cell.addEventListener('mouseover', (e) => {
     cell.setAttribute('style', 'background: black;');
 }));
+
+//Reset button
+function reset() {
+    cells.forEach(cell => cell.setAttribute('style', 'background: white;'));
+}
+let resetBtn = document.querySelector('.reset');
+resetBtn.addEventListener('click', reset);
 
