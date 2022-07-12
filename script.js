@@ -18,7 +18,7 @@ function createGrid(cellNum) {
 }
 
 //Start the game
-createGrid(16);
+createGrid(64);
 
 //Reset button
 function reset() {
