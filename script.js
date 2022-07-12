@@ -1,5 +1,7 @@
 //UI
 let grid = document.querySelector('.container');
+let blackButton = document.querySelector('.black');
+let rgbButton = document.querySelector('.rgb');
 
 //Creating the grid
 function createGrid(cellNum) {
@@ -62,3 +64,34 @@ let cells = document.querySelectorAll('.cell');
 cells.forEach((cell) => cell.addEventListener('mouseover', (e) => {
     cell.setAttribute('style', 'background: black;');
 }));
+
+//Color functions
+
+//Function to set color to black
+function setBlack() {
+    cells.forEach((cell) => cell.addEventListener('mouseover', (e) => {
+        cell.setAttribute('style', 'background: black;');
+    }));
+};
+
+//function to set the color to a random color
+function setColor() { 
+    cells.forEach((cell) => cell.addEventListener('mouseover', (e) => {
+        let randColor = generateRandomColor();
+        cell.setAttribute('style', `background: ${randColor};`);
+    }));
+}
+
+//Function to generate a random color
+function generateRandomColor(){
+    let maxVal = 0xFFFFFF; // 16777215
+    let randomNumber = Math.random() * maxVal; 
+    randomNumber = Math.floor(randomNumber);
+    randomNumber = randomNumber.toString(16);
+    let randColor = randomNumber.padStart(6, 0);   
+    return `#${randColor.toUpperCase()}`
+}
+
+//Wiring up the buttons to launch the functions
+blackButton.addEventListener('click', setBlack);
+rgbButton.addEventListener('click', setColor);

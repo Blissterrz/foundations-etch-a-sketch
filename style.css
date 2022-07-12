@@ -79,3 +79,10 @@ button:hover {
     background-color: white;
     flex: 1;
 }
+
+.subTitle {
+    color: white;
+    font-family: quicksand, roboto, sans-serif;
+    text-decoration: underline;
+    font-weight: 900;
+}
